@@ -2,7 +2,6 @@
   "name": "tapup-api",
   "version": "1.0.0",
   "description": "tapup, backend, express",
-  "type": "module",
   "main": "src/index.ts",
   "repository": "https://github.com/antonio-lazaro/prisma-express-typescript-boilerplate.git",
   "scripts": {
