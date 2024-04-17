@@ -153,6 +153,7 @@ const updateUserById = async <Key extends keyof User>(
  */
 const deleteUserById = async (userId: number): Promise<User> => {
   const user = await getUserById(userId);
+  console.log(user);
   if (!user) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
   }
