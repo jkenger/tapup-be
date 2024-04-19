@@ -1,16 +1,19 @@
-# RESTful API Node Server Boilerplate
+# TAPUP BE
 
-A boilerplate/starter project for quickly building RESTful APIs using [Node.js](https://nodejs.org), [TypeScript](https://www.typescriptlang.org), [Express](https://expressjs.com), and [Prisma](https://www.prisma.io).
+This repository is for Tapup.
 
-This project is an adaptation of the project [RESTful API Node Server Boilerplate](https://github.com/hagopj13/node-express-boilerplate) using a [PostgreSQL](https://www.postgresql.org) database with [Prisma](https://www.prisma.io) ORM. Many of the files are just an adaptation to [TypeScript](https://www.typescriptlang.org) from the files of the previously mentioned project.
+## Pre-requisites
+
+- Docker Hub [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Docker in VSCode Extension
 
 ## Quick Start
 
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/antonio-lazaro/prisma-express-typescript-boilerplate.git
-cd prisma-express-typescript-boilerplate
+git clone --depth 1 https://github.com/jkenger/tapup-be.git
+cd cd tapup-be
 npx rimraf ./.git
 ```
 
@@ -26,6 +29,13 @@ Set the environment variables:
 cp .env.example .env
 
 # open .env and modify the environment variables (if needed)
+```
+
+Start by Docker (Recommended):
+Make sure to start your Docker Desktop before running this command.
+
+```
+yarn docker:dev
 ```
 
 ## Table of Contents
