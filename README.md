@@ -4,6 +4,8 @@ This repository is for Tapup.
 
 ## Pre-requisites
 
+### If using docker-compose
+
 - Docker Hub [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Docker in VSCode Extension
 
