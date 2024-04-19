@@ -31,7 +31,13 @@ cp .env.example .env
 # open .env and modify the environment variables (if needed)
 ```
 
-Start by Docker (Recommended):
+Start:
+
+```
+yarn dev
+```
+
+Start by Docker:
 Make sure to start your Docker Desktop before running this command.
 
 ```
