@@ -15,7 +15,7 @@ Clone the repo:
 
 ```bash
 git clone --depth 1 https://github.com/jkenger/tapup-be.git
-cd cd tapup-be
+cd tapup-be
 npx rimraf ./.git
 ```
 
