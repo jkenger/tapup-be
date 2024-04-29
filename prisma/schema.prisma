@@ -36,6 +36,7 @@ model Token {
 
 enum Role {
   USER
+  ACTIVATED_USER
   ADMIN
 }
 

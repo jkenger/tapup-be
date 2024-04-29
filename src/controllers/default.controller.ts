@@ -5,6 +5,11 @@ const getDefault = catchAsync(async (req, res) => {
   res.status(httpStatus.OK).send('Welcome to TapUp BE API!');
 });
 
+const getActivatedDefault = catchAsync(async (req, res) => {
+  res.status(httpStatus.OK).send('Activated User');
+});
+
 export default {
-  getDefault
+  getDefault,
+  getActivatedDefault
 };

@@ -17,7 +17,7 @@ const defaultRoutes = [
     route: userRoute
   },
   {
-    path: '/test',
+    path: '',
     route: defaultRoute
   }
 ];

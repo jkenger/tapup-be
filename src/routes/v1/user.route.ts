@@ -3,12 +3,13 @@ import auth from '../../middlewares/auth';
 import validate from '../../middlewares/validate';
 import { userValidation } from '../../validations';
 import { userController } from '../../controllers';
+import config from '../../config/config';
 
 const router = express.Router();
 
 router
   .route('/')
-  .post(auth('manageUsers'), validate(userValidation.createUser), userController.createUser)
+  .post(validate(userValidation.createUser), userController.createUser)
   .get(auth('getUsers'), validate(userValidation.getUsers), userController.getUsers);
 
 router
