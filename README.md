@@ -4,6 +4,9 @@ This repository is for Tapup.
 
 ## Pre-requisites
 
+- Git [Git](https://git-scm.com/downloads)
+- Node [Node](https://nodejs.org/en/download/)
+
 ### If using docker-compose
 
 - Docker Hub [Docker Desktop](https://www.docker.com/products/docker-desktop/)
