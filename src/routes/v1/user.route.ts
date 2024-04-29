@@ -3,7 +3,6 @@ import auth from '../../middlewares/auth';
 import validate from '../../middlewares/validate';
 import { userValidation } from '../../validations';
 import { userController } from '../../controllers';
-import config from '../../config/config';
 
 const router = express.Router();
 
