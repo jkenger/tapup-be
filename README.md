@@ -7,10 +7,15 @@ This repository is for Tapup.
 - Git [Git](https://git-scm.com/downloads)
 - Node [Node](https://nodejs.org/en/download/)
 
-### If using docker-compose
+### If using docker-compose (Recommended)
 
 - Docker Hub [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Docker in VSCode Extension
+
+### If running locally with PgAdmin.
+
+- PostgreSQL [PostgreSQL](https://www.postgresql.org/download/)
+- PgAdmin [PgAdmin](https://www.pgadmin.org/download/pgadmin-4-apt/)
 
 ## Quick Start
 
@@ -34,7 +39,9 @@ Set the environment variables:
 cp .env.example .env
 
 # open .env and modify the environment variables (if needed)
+
 ```
+
 
 Start:
 
@@ -43,11 +50,58 @@ yarn dev
 ```
 
 Start by Docker:
+
+Make sure your DATABASE_URL in .env file matches the name of postgres image in the docker-compose.yml file as hostname.
+
+Default: 
+
+```bash
+# postgresql://<username>:<password>@<hostname>:<port>/mydb?schema=public
+DATABASE_URL=postgresql://postgres:secret@postgresdb:5432/mydb?schema=public
+```
+
+
 Make sure to start your Docker Desktop before running this command.
 
 ```
 yarn docker:dev
 ```
+
+#### If running with PgAdmin locally.
+
+Open PgAdmin.
+
+Add New Server.
+
+Enter a name (any name) for the database server.
+
+In the Connection tab.
+
+Match what was written in the .env DATABASE_URL
+
+```bash
+# postgresql://<username>:<password>@<hostname>:<port>/mydb?schema=public
+DATABASE_URL=postgresql://postgres:secret@localhost:5432/mydb?schema=public
+```
+
+Example:
+
+    Host name/address: localhost
+
+    Port: 5432 
+
+    Username: postgres 
+
+    Password: secret
+
+Then hit save.
+
+Start:
+
+```
+yarn dev
+```
+
 
 ## Table of Contents
 
