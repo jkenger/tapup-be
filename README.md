@@ -4,6 +4,9 @@ This repository is for Tapup.
 
 ## Pre-requisites
 
+- Git [Git](https://git-scm.com/downloads)
+- Node [Node](https://nodejs.org/en/download/)
+
 ### If using docker-compose
 
 - Docker Hub [Docker Desktop](https://www.docker.com/products/docker-desktop/)
@@ -15,7 +18,7 @@ Clone the repo:
 
 ```bash
 git clone --depth 1 https://github.com/jkenger/tapup-be.git
-cd cd tapup-be
+cd tapup-be
 npx rimraf ./.git
 ```
 
