@@ -1,7 +1,7 @@
 import express from 'express';
 import authRoute from './auth.route';
 import userRoute from './user.route';
-import defaultRoute from './default.route';
+import appRoute from './app.route';
 import docsRoute from './docs.route';
 import config from '../../config/config';
 
@@ -13,12 +13,13 @@ const defaultRoutes = [
     route: authRoute
   },
   {
+    path: '',
+    route: appRoute
+  },
+  // Add your new route here::
+  {
     path: '/users',
     route: userRoute
-  },
-  {
-    path: '',
-    route: defaultRoute
   }
 ];
 

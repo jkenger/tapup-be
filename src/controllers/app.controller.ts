@@ -1,8 +1,8 @@
 import httpStatus from 'http-status';
 import catchAsync from '../utils/catchAsync';
 
-const getDefault = catchAsync(async (req, res) => {
-  res.status(httpStatus.OK).send('Welcome to TapUp BE API!');
+const getDashboard = catchAsync(async (req, res) => {
+  res.status(httpStatus.OK).send('Dashboard');
 });
 
 const getActivatedDefault = catchAsync(async (req, res) => {
@@ -10,6 +10,6 @@ const getActivatedDefault = catchAsync(async (req, res) => {
 });
 
 export default {
-  getDefault,
+  getDashboard,
   getActivatedDefault
 };
