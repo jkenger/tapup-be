@@ -46,7 +46,6 @@ model TapupCards {
 
 enum Role {
   USER
-  ACTIVATED_USER
   ADMIN
 }
 
