@@ -42,18 +42,9 @@ cp .env.example .env
 
 ```
 
-
-Start:
-
-```
-yarn dev
-```
-
 Start by Docker:
 
-Make sure your DATABASE_URL in .env file matches the name of postgres image in the docker-compose.yml file as hostname.
-
-Default: 
+Make sure your DATABASE_URL in .env file matches the name of postgres image in the docker-compose.yml file as hostname:
 
 ```bash
 # postgresql://<username>:<password>@<hostname>:<port>/mydb?schema=public
