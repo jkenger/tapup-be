@@ -91,7 +91,7 @@ const getUserById = async <Key extends keyof User>(
 ): Promise<Pick<User, Key> | null> => {
   return prisma.user.findUnique({
     where: { id: +id },
-    select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {})
+    select: { ...keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}), tapupCards: true }
   }) as Promise<Pick<User, Key> | null>;
 };
 
@@ -153,7 +153,6 @@ const updateUserById = async <Key extends keyof User>(
  */
 const deleteUserById = async (userId: number): Promise<User> => {
   const user = await getUserById(userId);
-  console.log(user);
   if (!user) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found');
   }
