@@ -11,6 +11,6 @@ router
   .route('/activate-card')
   .post(auth(), validate(appValidation.activateCard), appController.activateCard);
 
-router.route('/tapup-cards').get(auth(), appController.getTapupCards);
+router.route('/tapup-cards/:id').get(auth(), appController.getTapupCards);
 
 export default router;

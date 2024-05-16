@@ -16,7 +16,12 @@ const activateCard = catchAsync(async (req, res) => {
 });
 
 const getTapupCards = catchAsync(async (req, res) => {
-  const businessCards = await prisma.tapupCards.findMany();
+  const paramUserId = req.params.id;
+  const businessCards = await prisma.tapupCards.findMany({
+    where: {
+      userId: +paramUserId
+    }
+  });
   res.status(httpStatus.OK).send(businessCards);
 });
 
